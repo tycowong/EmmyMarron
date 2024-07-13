@@ -1,0 +1,153 @@
+@font-face {
+    font-family: TAN;
+    src: url(fonts/TAN\ Moonlight\ Display.ttf);
+}
+
+body {
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+        "side main"
+        "side main";
+    
+}
+
+.header {
+    display: none;
+}
+
+.sidebar {
+    background-color: #2C47BE;
+    height: 100vh;
+    width: 260px;
+    position: fixed;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas: 
+    "name-titles"
+    "content";
+
+    grid-area: side;
+}
+
+.main {
+    background-color: #EBE3D6;
+    padding: 10px;
+
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.name-title {
+    font-family: TAN;
+    color: #EF7B57;
+    font-size: 73px;
+    grid-area: name-titles;
+}
+
+.headshot--1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--6 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--7 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--8 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--9 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.headshot--11 {   
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 400px;
+}
+
+.photo-wrap{
+    padding: 10px;
+    height: 400px;
+}
+
+@media (max-width: 599px){
+
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+        grid-template-areas: 
+        "top-head"
+        "bottom-photos";
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .header {
+        background-color: #2C47BE;
+        grid-area: top-head;
+    }
+
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        grid-area: bottom-photos;
+    }
+}
