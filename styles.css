@@ -4,13 +4,17 @@
 }
 
 @font-face {
-    font-family: arial-nova;
+    font-family: garam;
     src: url(fonts/Arial\ Nova.ttf);
 }
 
+
+
 body {
     margin: 0;
+    background-color: #ECE8E1;
 
+    font-family: "EB Garamond", serif;
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 60px 1fr;
@@ -25,7 +29,6 @@ body {
 }
 
 .sidebar {
-    background-color: white;
     height: 100vh;
     width: 260px;
     position: fixed;
@@ -42,93 +45,28 @@ body {
 }
 
 .main {
-    background-color: white;
     padding: 10px;
-
     grid-area: main;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .name-title {
     font-family: TAN;
     color: #EF7B57;
-    font-size: 73px;
+    font-size: 64px;
     grid-area: name-titles;
+    padding-right: 10px;
 }
 
-.headshot--1 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.headshot {
     height: 400px;
-    
-}
-
-.headshot--2 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 400px;
-}
-
-.headshot--3 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 400px;
-}
-
-.headshot--4 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 400px;
-}
-
-.headshot--5 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 400px;
-}
-
-.headshot--6 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 400px;
-}
-
-.headshot--7 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 400px;
-}
-
-.headshot--8 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 400px;
-}
-
-.headshot--9 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 400px;
-}
-
-.headshot--10 {
-    font-family: arial-nova;
-    font-size: xx-large;
-    padding-top: 40px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    height: 390px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .photo-wrap{
-    padding: 10px;
-    padding-bottom: 40px;
     height: 400px;
     transition: transform 0.8s cubic-bezier(0.34, 1.04, 0.64, 0.97);
 }
@@ -156,6 +94,10 @@ body {
     font-size: large;
 }
 
+ion-icon {
+    font-size: 25px;
+}
+
 
 .photo-wrap-more:hover {
     transform: scale(1.08);
@@ -164,6 +106,34 @@ body {
 .photo-wrap:hover {
     transform: scale(1.08);
 }
+
+.name-content-space {
+    height: 20px;
+}
+
+.instagram-hyper {
+    cursor: pointer;
+    width: fit-content;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+a:link {color: black;}      /* unvisited link */
+a:visited {color: black;}   /* visited link */
+a:hover {color: black;}     /* mouse over link */
+a:active {color: black;}
+a {text-decoration: none;}
+.media-handle {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin: 0;
+    font-size: 23px;
+    font-weight: 550;
+}
+
+
 
 @media (max-width: 599px){
 
@@ -184,30 +154,31 @@ body {
     .header-nav {
         display: flex;
         flex-direction: row;
-        outline-color: white;
     }
+
 
     .nav-hyperlink {
         padding: 10px;
-        padding-top: 30px;
-        font-family: arial-nova;
-        font-size: large;
-        font-weight: bold;
-    }
+        padding-top: 15px;
+        font-size: 20px; 
+        font-optical-sizing: auto; font-weight: 527; 
+        font-weight: bold; 
+        font-style: italic;
+     }
 
     .header-name {
         font-family: TAN;
-        padding-top: 32px;
+        padding-top: 38px;
         padding-bottom: 5px;
         color: #EF7B57;
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color:white;
+        background-color:#ECE8E1;
         grid-area: top-head;
     }
 
@@ -215,7 +186,6 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        outline:white;
 
         grid-area: bottom-photos;
     }
