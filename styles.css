@@ -21,11 +21,15 @@ body {
     color: white;
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 60px 1fr;
     grid-template-areas: 
-        "side main"
         "side main";
     
+}
+
+h3 {
+    font-family: "EB Garamond", serif;
+    color: white;
+    font-size: 40px;
 }
 
 .header {
@@ -39,7 +43,6 @@ body {
     padding: 20px;
     padding-top: 40px;
     padding-left: 40px;
-    grid-template-columns: 1fr;
     grid-template-rows: 300px 1fr;
     grid-template-areas: 
     "name-titles"
@@ -48,10 +51,26 @@ body {
     grid-area: side;
 }
 
+.side-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-list {
+    margin-top: 10px;
+}
+
 .main {
-    padding: 10px;
+    font-style: italic;
     grid-area: main;
-    width: 94%;
+    height: 100vh;
+    width: 100%;
+}
+
+.index-container {
+    padding: 10px;
+    padding-top: 30px;
+    width: 99%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -63,25 +82,17 @@ body {
     color: #EF7B57;
     font-size: 60px;
     grid-area: name-titles;
-    padding-right: 10px;
 }
 
 .headshot {
     background-color: white;
     margin-right: 5px;
     margin-left: 5px;
-    height: 500px;
-    width: 300px;
+    height: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-}
-
-.lower-card-info {
-    background-color: white;
-    height: 70px;
-    width: 100px;
 }
 
 .photo-wrap{
@@ -89,14 +100,6 @@ body {
     transition: transform 0.8s cubic-bezier(0.34, 1.04, 0.64, 0.97);
 }
 
-.photo-wrap-more {
-    padding: 10px;
-    padding-bottom: 40px;
-    height: 400px;
-    transition: transform 0.8s cubic-bezier(0.34, 1.04, 0.64, 0.97);
-    cursor: pointer;
-    position: relative;
-}
 
 .more-container {
     top: 0;
@@ -117,22 +120,21 @@ ion-icon {
 }
 
 
-.photo-wrap-more:hover {
-    transform: scale(1.08);
-}
-
-.photo-wrap:hover {
-    transform: scale(1.08);
-}
-
 .name-content-space {
-    height: 15px;
+    height: 20px
 }
 
 .instagram-hyper {
     cursor: pointer;
     width: fit-content;
-    font-style: italic;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contact-us {
+    cursor: pointer;
+    width: fit-content;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -143,15 +145,93 @@ a:visited {color: white;}   /* visited link */
 a:hover {color: white;}     /* mouse over link */
 a:active {color: white;}
 a {text-decoration: none;}
+
+
 .media-handle {
     padding-left: 10px;
     padding-bottom: 5px;
     margin: 0;
-    font-size: 23px;
+    font-size: 27px;
     font-weight: 550;
+    font-style: italic;
 }
 
+.contact-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.contact-box {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    padding: 30px 40px;
+    height: 600px;
+    width: 800px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group{
+    flex-basis: 45%;
+}
+
+label {
+    font-size: 30px;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    background-color: rgb(0,0,0,0);
+    width: 100%;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-bottom: 3px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(0,0,0,0);
+    border: 2px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.banner-card {
+    position: relative;
+}
+
+.banner-card img {
+    height: 700px;
+}
+
+::placeholder {
+    color: white;
+    opacity: 80%;
+}
 
 @media (max-width: 599px){
 
@@ -172,6 +252,7 @@ a {text-decoration: none;}
     .header-nav {
         display: flex;
         flex-direction: row;
+        justify-content: center;
     }
 
 
