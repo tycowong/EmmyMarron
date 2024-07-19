@@ -5,22 +5,24 @@
 
 @font-face {
     font-family: garam;
-    src: url(fonts/Arial\ Nova.ttf);
+    src: url(./fonts/Arial\ Nova.ttf);
 }
 
 
 
 body {
+    overflow-y: hidden;
     margin: 0px;
     border: 0;
-    width: 1fr;
-    height: 1fr;
-    background-color: #2C47BE;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
 
     font-family: "EB Garamond", serif;
-    color: white;
+    color: black;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 340px 1fr;
     grid-template-areas: 
         "side main";
     
@@ -28,7 +30,7 @@ body {
 
 h3 {
     font-family: "EB Garamond", serif;
-    color: white;
+    color: black;
     font-size: 40px;
 }
 
@@ -37,18 +39,17 @@ h3 {
 }
 
 .sidebar {
-    height: 100vh;
+    grid-area: side;
+    margin: 0;
+    height: auto;
     width: 260px;
     position: fixed;
-    padding: 20px;
     padding-top: 40px;
     padding-left: 40px;
     grid-template-rows: 300px 1fr;
     grid-template-areas: 
     "name-titles"
     "content";
-
-    grid-area: side;
 }
 
 .side-menu {
@@ -63,7 +64,7 @@ h3 {
 .main {
     font-style: italic;
     grid-area: main;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -75,27 +76,24 @@ h3 {
 }
 
 .index-container {
-    padding: 10px;
-    padding-top: 30px;
-    width: 99%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
-    row-gap: 25px;
 }
 
 .name-title {
-    font-family: TAN;
-    color: #EF7B57;
+    font-family: garam;
+    color: black;
     font-size: 60px;
     grid-area: name-titles;
 }
 
 .headshot {
-    background-color: white;
-    margin-right: 5px;
-    margin-left: 5px;
-    height: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 30px;
+    height: 90%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -103,7 +101,7 @@ h3 {
 }
 
 .photo-wrap{
-    height: 400px;
+    height: 90vh; 
     transition: transform 0.8s cubic-bezier(0.34, 1.04, 0.64, 0.97);
 }
 
@@ -123,12 +121,7 @@ h3 {
 }
 
 ion-icon {
-    font-size: 25px;
-}
-
-
-.name-content-space {
-    height: 20px
+    font-size: 20px;
 }
 
 .instagram-hyper {
@@ -142,15 +135,16 @@ ion-icon {
 .contact-us {
     cursor: pointer;
     width: fit-content;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
 }
 
-a:link {color: white;}      /* unvisited link */
-a:visited {color: white;}   /* visited link */
-a:hover {color: white;}     /* mouse over link */
-a:active {color: white;}
+a:link {color: black;}      /* unvisited link */
+a:visited {color: black;}   /* visited link */
+a:hover {color: black;}     /* mouse over link */
+a:active {color: black;}
 a {text-decoration: none;}
 
 
@@ -158,7 +152,7 @@ a {text-decoration: none;}
     padding-left: 10px;
     padding-bottom: 5px;
     margin: 0;
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 550;
     font-style: italic;
 }
@@ -207,7 +201,7 @@ label {
 input {
     background-color: rgb(0,0,0,0);
     width: 100%;
-    color: white;
+    color: black;
     border: none;
     font-size: 20px;
     border-bottom: 3px solid #ccc;
@@ -218,7 +212,7 @@ input {
 
 textarea {
     width: 100%;
-    color: white;
+    color: black;
     font-size: 20px;
     background-color: rgb(0,0,0,0);
     border: 2px solid #ccc;
@@ -236,7 +230,7 @@ textarea {
 }
 
 ::placeholder {
-    color: white;
+    color: black;
     opacity: 80%;
 }
 
@@ -279,10 +273,10 @@ textarea {
      }
 
     .header-name {
-        font-family: TAN;
+        font-family: garam;
         padding-top: 38px;
         padding-bottom: 5px;
-        color: #EF7B57;
+        color: black;
         font-size: 45px;
     }
 
@@ -303,7 +297,6 @@ textarea {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        justify-content: center;
         align-items: center;
         grid-area: bottom-page;
     }
@@ -362,7 +355,7 @@ textarea {
     input {
         background-color: rgb(0,0,0,0);
         width: 100%;
-        color: white;
+        color: black;
         border: none;
         font-size: 20px;
         border-bottom: 3px solid #ccc;
@@ -373,7 +366,7 @@ textarea {
 
     textarea {
         width: 100%;
-        color: white;
+        color: black;
         font-size: 20px;
         background-color: rgb(0,0,0,0);
         border: 2px solid #ccc;
@@ -393,13 +386,40 @@ textarea {
     }
 
     ::placeholder {
-        color: white;
+        color: black;
         opacity: 80%;
     }
 
     h3 {
         font-family: "EB Garamond", serif;
-        color: white;
+        color: black;
         font-size: 40px;
     }
+
+
+    .index-container {
+        padding: 10px;
+        padding-top: 30px;
+        width: 99%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 25px;
+    }
+
+    .headshot {
+        margin-top: 10px;
+        display: flex;
+        height: 400px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+        
+    .photo-wrap{
+        height: 400px; 
+        transition: transform 0.8s cubic-bezier(0.34, 1.04, 0.64, 0.97);
+    }
+
+
 }
