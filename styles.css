@@ -88,7 +88,7 @@ h3 {
 }
 
 .name-title {
-    font-family: garam;
+    font-family: TAN;
     color: black;
     font-size: 60px;
     grid-area: name-titles;
@@ -286,7 +286,7 @@ textarea {
      }
 
     .header-name {
-        font-family: garam;
+        font-family: TAN;
         padding-top: 38px;
         padding-bottom: 5px;
         color: black;
